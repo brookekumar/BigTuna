@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Scores = sequelize.define("Scores", {
+    var Questions = sequelize.define("Questions", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: 1,
@@ -8,5 +8,5 @@ module.exports = function(sequelize, DataTypes) {
         },
         
     });
-    return Scores;
+    return Questions;
   };

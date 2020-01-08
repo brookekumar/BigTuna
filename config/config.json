@@ -1,26 +1,26 @@
 {
   "development": {
     "username": "root",
-    "password": "Winter01@",
-    "database": "database_development",
+    "password": null,
+    "database": "project2_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "project2_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "project2_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": 0
   }
 }
