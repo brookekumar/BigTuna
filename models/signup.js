@@ -14,17 +14,17 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     user_password: {
-      types: DataTypes.STRING,
-      allowNull: false,
-    },
-    name: {
-      types: DataTypes.STRING,
-      allowNull: false,
-    },
-    last_name: {
-      types: DataTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     }
+    // name: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // last_name: {
+    //   types: DataTypes.STRING,
+    //   allowNull: false,
+    // }
   });
   return User;
 };
