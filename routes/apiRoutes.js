@@ -9,11 +9,23 @@ var Signup = require("../models/signup.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
+
+  app.get('/webhook/', function(req,res){
+    if (req.query['hub.verify_token'] === "jimmyd2923"){
+        res.send(req.query['hub.challenge'])
+    }
+    res.send("wrong shit")
+})
   app.post("/api/newUser", function(req, res) {
     // Take the request...
     var signup = req.body;
 
     // Create a routeName
+
+ 
+
+
+
 
     // Using a RegEx Pattern to remove spaces from character.name
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
