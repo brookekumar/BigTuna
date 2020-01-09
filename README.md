@@ -1,2 +1,2 @@
 # BigTuna
-Project 2 - Big Tuna!!
+Project Insight - ACT Prepatory Application 
