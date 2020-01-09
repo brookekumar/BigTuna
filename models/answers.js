@@ -1,26 +1,25 @@
 module.exports = function(sequelize, DataTypes) {
-    var Questions = sequelize.define("Questions", {
+    var Answers = sequelize.define("Answer", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
             allowNull: false
         },
-        questions: {
+        answer: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
-        category: {
-            type: DataTypes.STRING,
-            allowNull: false,
+        questions_id:{
+            type: DataTypes.INTEGER,
+            model: 'questions', // sets table 'scores' for reference
+            key: 'id', // sets column 'id' to use as reference point
         },
-        difficulty: DataTypes.INTEGER,
-        is_active: {
+        is_correct: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
-            defaultValue: false
         }
 
     });
-    return Questions;
+    return Answers;
   };
