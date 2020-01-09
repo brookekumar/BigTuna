@@ -16,10 +16,10 @@
     "operatorsAliases": 0
   },
   "production": {
-    "username": "root",
-    "password": "james2923",
-    "database": "project2_db",
-    "host": "127.0.0.1",
+    "username": "dgajvuxu4udtqgjd",
+    "password": "qu3vwdjee9rq1kf4",
+    "database": "f56t8f5ztuuoq0fp",
+    "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": 0
   }
