@@ -1,16 +1,10 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Answers = sequelize.define("Answer", {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
-        },
         answer: {
             type: DataTypes.STRING,
             allowNull: true,
         },
-        questions_id:{
+        questions_id: {
             type: DataTypes.INTEGER,
             model: 'questions', // sets table 'scores' for reference
             key: 'id', // sets column 'id' to use as reference point
@@ -22,4 +16,4 @@ module.exports = function(sequelize, DataTypes) {
 
     });
     return Answers;
-  };
+};

@@ -1,11 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     var UserAnswers = sequelize.define("User_answers", {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
-        },
         answer_id: {
             type: DataTypes.INTEGER,
             model: 'answers', // sets table 'answers' for reference
