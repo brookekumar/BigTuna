@@ -3,8 +3,15 @@ var db = require("../models");
 var passport = require("../config/passport");
 
 module.exports = function(app) {
+// Creates the endpoint for our webhook 
 
-  // Creates the endpoint for our webhook 
+app.get('/webhook/', function(req,res){
+  if (req.query['hub.verify_token'] === "jimmyd2923"){
+      res.send(req.query['hub.challenge'])
+  }
+  res.send("wrong shit")
+})
+
 app.post('/webhook', (req, res) => {  
  
   let body = req.body;
@@ -29,19 +36,11 @@ app.post('/webhook', (req, res) => {
   }
 
 });
-
-  app.get('/webhook/', function(req,res){
-    if (req.query['hub.verify_token'] === "jimmyd2923"){
-        res.send(req.query['hub.challenge'])
-    }
-    res.send("wrong shit")
-})
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
 
   // Your verify token. Should be a random string.
-  let VERIFY_TOKEN = "6e7c2a8115c7dc8cc43a7238bd6e03b7"
-    
+  let VERIFY_TOKEN = "jimmyd2923"
   // Parse the query params
   let mode = req.query['hub.mode'];
   let token = req.query['hub.verify_token'];
@@ -63,6 +62,23 @@ app.get('/webhook', (req, res) => {
     }
   }
 });
+    // app.post('/webhook/', function(req,res){
+    //   let messaging_events = req.body.entry[0].messaging_events
+    //   for (let i = 0; i < messaging_events.length; i++){
+    //     let events = messaging_events [i]
+    //     let sender = event.sender.id
+    //     if (event.message && event.message.text) {
+    //       let
+    //     }
+    //   }
+    // })
+  app.get('/webhook/', function(req,res){
+    if (req.query['hub.verify_token'] === "jimmyd2923"){
+        res.send(req.query['hub.challenge'])
+    }
+    res.send("wrong shit")
+})
+
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
