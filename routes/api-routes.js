@@ -55,3 +55,5 @@ module.exports = function(app) {
     }
   });
 };
+
+// Route for randomly selecting questions from db
