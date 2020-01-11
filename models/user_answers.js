@@ -5,11 +5,11 @@ module.exports = function(sequelize, DataTypes) {
             model: 'answers', // sets table 'answers' for reference
             key: 'id', // sets column 'id' to use as reference point
           },
-        questions_id:{
-            type: DataTypes.INTEGER,
-            model: 'questions', // sets table 'questions' for reference
-            key: 'id', // sets column 'id' to use as reference point
-        },
+        // questions_id:{
+        //     type: DataTypes.INTEGER,
+        //     model: 'questions', // sets table 'questions' for reference
+        //     key: 'id', // sets column 'id' to use as reference point
+        // },
         user_id: {
             type: DataTypes.INTEGER,
             model: 'signup', // sets table 'signup' for reference
