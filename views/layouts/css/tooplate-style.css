@@ -321,7 +321,7 @@ http://www.tooplate.com/view/2106-soft-landing
   -----------------------------------------*/
 
   #home {
-    background: url('../images/home-bg.jpg') no-repeat center center;
+    background: url('../images/landing.png') no-repeat center center;
     background-size: cover;
     vertical-align: middle;
     display: -webkit-box;
@@ -356,7 +356,6 @@ http://www.tooplate.com/view/2106-soft-landing
     text-transform: uppercase;
     margin: 10px 0;
   }
-  
 
 
   /*---------------------------------------
