@@ -8,6 +8,7 @@ $(document).ready(function() {
     signUpForm.on("submit", function(event) {
       event.preventDefault();
       var userData = {
+        
         email: emailInput.val().trim(),
         password: passwordInput.val().trim()
       };
@@ -29,7 +30,7 @@ $(document).ready(function() {
         password: password
       })
         .then(function(data) {
-          window.location.replace("/members");
+          window.location.replace("/dashboard");
           // If there's an error, handle it by throwing up a bootstrap alert
         })
         .catch(handleLoginErr);
