@@ -54,6 +54,35 @@ module.exports = function(app) {
       });
     }
   });
-};
 
+  app.put("/api/email/", function(req, res) {
+
+    newemail = req.body.newemail;
+    currentId = req.user.id;
+
+    db.User.update({
+      email: newemail
+    }, {
+      where: {
+        id: currentId
+      }
+    }).then(function(response) {
+      req.user.email = newemail;
+      res.json(response);
+    });
+  });
+
+ app.delete("/api/member/", function(req, res) {
+
+  currentId = req.user.id;
+
+    db.User.destroy({
+      where: {
+        id: currentId
+      }
+    }).then(function(response) {
+      res.json(response);
+    });
+  });
+};
 // Route for randomly selecting questions from db

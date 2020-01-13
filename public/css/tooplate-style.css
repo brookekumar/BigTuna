@@ -640,6 +640,44 @@ http://www.tooplate.com/view/2106-soft-landing
     color: #ffffff;
   }
 
+    /*---------------------------------------
+      CONTACT             
+  -----------------------------------------*/
+
+  .contact-form .col-md-12,
+  .contact-form .col-md-4 {
+    padding-left: 0;
+  }
+
+  .contact-form .form-control {
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid #f0f0f0;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 10px 0;
+  }
+
+  .contact-form .form-control:focus {
+    border-bottom-color: #202020;
+  }
+
+  .contact-form input {
+    height: 50px;
+  }
+
+  .contact-form input[type='submit'] {
+    background: #38B6FF;
+    border-radius: 50px;
+    border: 0;
+    color: #ffffff;
+  }
+
+  .contact-form input[type='submit']:hover {
+    background:  #38B6FF;
+    color: #ffffff;
+  }
+
 
   /*---------------------------------------
      FOOTER              

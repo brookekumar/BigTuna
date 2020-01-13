@@ -1,104 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-	<title>Progress Insight | Settings</title>
-
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="team" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/tooplate-style.css">
-
+    <title>Progress Insight | Settings</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="team" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
 </head>
+
 <body>
-     <div id="loginbody">
-
-
-
-     <!-- MENU -->
-     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-          <div class="container">
-
-               <div class="navbar-header">
+    <div id="loginbody">
+        <!-- MENU -->
+        <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
+                        <span class="icon icon-bar"></span>
                     </button>
-
-                     <a class="navbar-brand" href="home.html"> <img src="images/1.png" alt="logo" id="logo"> </a>
-               </div>
-
-          </div>
-     </section>
-
-     <!-- CONTACT -->
-     <section id="contact" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
+                    <a class="navbar-brand" href="home.html"> <img src="images/1.png" alt="logo" id="logo"> </a>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT -->
+        <section id="contact" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
                     <div class="col-md-offset-1 col-md-10 col-sm-12">
-                         <form id="contact-form" role="form" action="" method="post">
-                              <div class="section-title">
-                                   <h1>Progress Insight | <b>Settings</b></h1>
-                              </div>
-                    
-                              <div class="col-md-12 col-sm-12">
-                                  <h2 style="color:black;size:80px;">change email</p>
-                                  <input type="email" class="form-control" placeholder="old  email address" name="email" required="">
-                                   <input type="email" class="form-control" placeholder="new email address" name="email" required="">
-                              </div>
-                             
-                              <h2 style="color:black;size:80px; padding-top: 500px;">delete account</h2>
-                              <div class="col-md-5 col-sm-5"></div>
-                              <div class="col-md-2 col-sm-2">
-                                   <input type="submit" class="form-control" name="delete account" value="delete account">
-                              </div>
-                              <div class="col-md-5 col-sm-5"></div>
-                         </form>
+                        <div class="section-title">
+                            <h1>Progress Insight | <b>Settings</b></h1>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <form class="contact-form" id="updateaccount" role="form" action="" method="post">
+                                <h2 style="color:black;size:80px;">change email</p>
+                                    <input type="email" class="form-control" placeholder="old  email address" id="oldemail" name="email" required="" disabled="">
+                                    <input type="email" class="form-control" placeholder="new email address" id="newemail" name="newemail" required="required">
+                                    <input type="submit" class="form-control" name="update account" value="update account" style="max-width:120px">
+                            </form>
+                        </div>
+                        <h2 style="color:black;size:80px; padding-top: 500px;">delete account</h2>
+                        <form class="contact-form" id="deleteaccount" role="form" action="" method="post">
+                            <div class="col-md-5 col-sm-5"></div>
+                            <div class="col-md-2 col-sm-2">
+                                <input type="submit" class="form-control" name="delete account" value="delete account">
+                            </div>
+                            <div class="col-md-5 col-sm-5"></div>
+                        </form>
                     </div>
-
-               </div>
-          </div>
-     </section>       
-
-
-     <!-- FOOTER -->
-     <footer id="footer" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer id="footer" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
                     <div class="copyright-text col-md-12 col-sm-12">
-                         <div class="col-md-12 col-sm-12">
-                              <p>Copyright &copy; 2020 Progress Insight
-                         </div>
-
-
-                         </div>
+                        <div class="col-md-12 col-sm-12">
+                            <p>Copyright &copy; 2020 Progress Insight
+                        </div>
                     </div>
+                </div>
+            </div>
+    </div>
+    </footer>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+    $("#updateaccount").submit(function(event) {
+        event.preventDefault();
 
-               </div>
-          </div>
-     </footer>
+        $.ajax({
+            url: '/api/email/',
+            type: 'PUT',
+            data: "newemail=" + $("#newemail").val(),
+            success: function(data) {
+                location.reload(true);
+            }
+        });
 
-</div>
-     <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.stellar.min.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
+    });
 
+    $("#deleteaccount").submit(function(event) {
+        event.preventDefault();
+
+        $.ajax({
+            method: "DELETE",
+            url: "/api/member/"
+        }).then(function() {
+             location.replace('/home.html');
+        });
+    });
+
+    $(document).ready(function() {
+
+        $.get("/api/user_data").then(function(data) {
+            $("#oldemail").val(data.email);
+        });
+
+    });
+    </script>
 </body>
+
 </html>
