@@ -28,20 +28,31 @@ var questions = [
 var currentQuestionIndex = 0;
 var correct = 0;
 var incorrect = 0;
+
 var num;
 function submit() {
+
+  
   console.log("question num: "+num);
   var selected = $(".modal-body input:checked").val();
+
   $("#selected").text('You selected ' + selected);
     //var button = $(event.relatedTarget);  // Button that triggered the modal
     //var num = parseInt(button.data('num'));
   if (questions[num].correctAnswer == selected) {
     correct++;
-    $("#mathScore").text(correct);
+    
   }
   else {
     incorrect++;
   }
+  //make button diabled.
+  $( "button[data-num='"+ num + "']" ).prop('disabled', true);
+
+  if (correct + incorrect === 5){
+    $("#mathScore").text(correct + " Correct / " + incorrect + " Incorrect");
+  }
+  
   console.log("correct: "+correct);
   console.log("incorrect : "+incorrect)
 }
@@ -73,6 +84,12 @@ $(function () {
   });
 });
 $(".go-button").on("click", function () {
+  
+  // Reactivate Buttons
+  $( "button").prop('disabled', false);
+  // Reset Score Text
+  $("#mathScore").text("");
+
   $(".home-info").hide();
 })
 $(".questionSubmit").on("click", function (event) {
