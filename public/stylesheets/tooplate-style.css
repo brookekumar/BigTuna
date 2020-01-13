@@ -388,7 +388,7 @@ http://www.tooplate.com/view/2106-soft-landing
   #feature .nav-tabs>li.active>a:focus, 
   #feature .nav-tabs>li.active>a:hover {
     background: transparent;
-    color: #202020;
+    color: #38B6FF;
     border-bottom: 3px solid #38B6FF;
   }
 
@@ -396,7 +396,7 @@ http://www.tooplate.com/view/2106-soft-landing
   #feature .nav>li>a:hover {
     background: transparent;
     border-bottom: 3px solid #38B6FF;
-    color: #202020;
+    color: #38B6FF;
   }
 
   #feature .tab-content {
