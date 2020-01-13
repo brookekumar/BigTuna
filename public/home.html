@@ -81,8 +81,8 @@
             <h1>welcome to progress insight, the leading computational knowledge engine.</h3>
               <h3>featuring artificially intelligent ACT prep and college advising services</h3>
               <form action="" method="get" class="online-form">
-                <input type="email" name="email" class="form-control" placeholder="Ask me anything" required="">
-                <button type="submit" class="form-control">Get started</button>
+                <input type="text" id = "movie-input" name="email" class="form-control" placeholder="Ask me anything" required="">
+                <button type="submit" id="find-movie" class="form-control">Get started</button>
               </form>
           </div>
         </div>
@@ -218,7 +218,45 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
 
+  $("#find-movie").on("click", function(event) {
+
+    // event.preventDefault() can be used to prevent an event's default behavior.
+    // Here, it prevents the submit button from trying to submit a form when clicked
+    event.preventDefault();
+
+    // Here we grab the text from the input box
+    var movie = $("#movie-input").val();
+    var movieAPI = movie.split(" ").join("%20")
+
+    // Here we construct our URL
+    if (movieAPI ===''){
+      movieAPI = "Hi";
+    }
+
+    var queryURL = "https://chriscastle.com/proxy/?:proxy:http://api.wolframalpha.com/v2/query?appid=Q8KXWE-8HK422TJVQ&output=json&input=" + movieAPI + "&includepodid=Result&format=plaintext";
+
+    // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
+    // and display it in the div with an id of movie-view
+    console.log(queryURL)
+    // ------YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE.
+
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function(response) {
+      responeObj = JSON.parse(response)
+      plainTextResponse = responeObj.queryresult.pods[0].subpods[0].plaintext;
+      $("#movie-view").text(plainTextResponse);
+      alert(plainTextResponse)
+    });
+
+    // -----------------------------------------------------------------------
+
+  });
+</script>
 
   <!-- SCRIPTS -->
   <script src="js/jquery.js"></script>
