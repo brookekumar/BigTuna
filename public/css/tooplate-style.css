@@ -416,6 +416,10 @@ http://www.tooplate.com/view/2106-soft-landing
     bottom: -27em;
   }
 
+  .modal-body{
+    padding-right: 40px;
+  }
+
 
 
   /*---------------------------------------
